@@ -1,191 +1,233 @@
-System.out.print("Enter a day number (1-7)");
+// Switch case statement
+System.out.println("\n Enter a day number (1-7): ")
 int day = scanner.nextInt();
 
-switch (day) {
-    case 1: System.out.println("Monday");break;
-    case 2: System.out.println("Tuesday");break;
-    case 3: System.out.println("Wednesday");break;
-    case 4: System.out.println("Thurday");break;
-    case 5: System.out.println("Friday");break;
-    case 6: System.out.println("Saturday");break;
-    case 7: System.out.println("Sunday");break;
-    default: System.out.println("Invalid day");break;
-        
-    
+switch(day){
+  case 1: System.out.println("Monday");break;
+  case 2: System.out.println("Tuesday");break;
+  case 3: System.out.println("Wednesday");break;
+  case 4: System.out.println("Thurday");break;
+  case 5: System.out.println("Friday");break;
+  case 6: System.out.println("Saturday");break;
+  case 7: System.out.println("Sunday");break;
+  default: System.out.println("Invalid day");break;
+
 }
 
+// loops
 
-
-System.out.println("\nCounting 1 to 5 with a for loop:");
-        for(int i= 1, i<=5; i++) {
-            System.out.println(i + " ");
-        }
-        System.out.println();
-
-System.out.println("\Counting down form with a while loop: ");
-
-        int n = 5;
-        while (n > 0){
-        System.out.print(n + " );
-        n--;
+System.out.println("\nCounting 1 to 5 with a for loop: ");
+for(int i = 1; i<=5; i++){
+  System.out.println(i + " ");
 }
-System.out.ptintln();
+System.out.println();
 
-System.out.println("\ndo-while example: ");
-int x=0;
+//while loops 
+System.out.println("\nCounting down form with a while loop: ");
+int n = 5;
+while (n > 0){
+  System.out.println(n + " ");
+  n--;
+}
+System.out.println();
+
+//do while loops
+System.out.println("\nDo-while example: ")
+int x = 0;
 do{
-    System.out.println("x= "+x);
-    x++;
-} while (x<3);
+  System.out.println("x = "+ x);
+  x++
+}while (x<3);
+
+//break and continue
+
+System.out.println("\nSkipping 3 using continue, stopping at 7 using break: ");
+for(int i = 1; i <= 10; i++){
+  if (i == 3)continue;
+  if (i == 7)break;
+  System.out.println(i +"");
+}
+System.out.println();
 
 
-System.out.println("\nSkipping 3 using continue, stopping at 7 using break; ");
-  for int (i=1; i <=10; i++){
-      if (i == 3 continue;
-      if (i == 7) break;
-      System.out.println(i +" ");
+//Methods
+// Takes a double, return its square s
+static double square(double n){
+  return n*n;
+}
+//Takes two ints, returns their sum 
+static int add(int a, int b){
+  return a+b;
+}
+
+//Void dunction: programs an action, return nothing 
+static void greet(String name){
+  System.out.println("Hello,"+name+"! Welcome to java.");
+}
+
+// recursive function/: calls itself with smaller problem
+static int factorial(int n){
+  if(n<=1){
+  return 1;
   }
-  System.out.println();
-\\ Methods
-\\ Takes a double, return its square
-static double square (double n){
-    return a + b;
+  return n * factorial(n-1);
 }
-Takes two ints, returns their sum
-    static int add (int a, int b){
-    return a + b;
-    }
 
-
-  System.out.println("Hello,"+name+ "! Welcome to java.")'
-}
-    return n * factoria(n-1)
-      }
-}
 static int multiply(int a, int b){
-    return a * b;
-
-static double multiply (double a, double b)
-    return a * b;
-
-static int power (int base, int exponent){
-    int result = 1;
-    for (int i=0; i <exponent; i++){
-        result *= base;
-    }
-    return result'
-    
+  return a*b;
+}
+static double multiply (double a,double b){
+  return a*b;
+}
+//power, exponent
+static int power(int base, int exponent){
+  int result = 1;
+  for (int i =0; i < exponent; i++){
+    result *= base;
+  }
+  return result;
 }
 
-int sum = add (5, 7);
-System.out.println("5 + 7=" + sum);
+//base
+static int power(int base){
+  return power(base, 2);
+}
 
-double sq = square (4.5);
-System.out.println("4.5 squared= "+ sq);
+//calling functions
+int = sum = add(5,7);
+System.out.println("5 + 7="+sum);
+
+//squareroot
+
+double sq = square(4.5);
+System.out.println("$.5 squared ="+sq)
 
 greet("Maria");
 
-System.out.println("5! = "+factoria(5));
+System.out.println("5! = "+factorial(5));
 
-System.out.println("multiply (2, 3)") ="+ multiply(2, 3));
-System.out.println("multiply(2.5,4.0") ="+ multiply (multiply(2.5,4.0));
+System.out.println("Multiply(2,3) ="+multiply(2,3));
+System.out.println("Multiply(2,5,4,0) ="+multiply(2,5,4,0));
 
 System.out.println("power(5)="+power(5));
-System.out.println("power(5,3)="power(5,3));
+System.out.println("power(5,3)="+power(5,3));
+Scanner.close()
 
+
+// New Java Compiler
+// intro card 
 import java.util.Scanner;
 
 public class Main{
-    public static void main(string{}args){
-        Scanner scanner = new Scanner(System.in);
+  public class static void main(String[]args){
+    Scanner scanner = new Scanner(System.in);
 
-    System.out.print("what is your name? ");
-    String name = scanner.nextline();
+    System.out.print("What is your name? ");
+    String name = scanner.nextLine();
     System.out.print("What is your age? ");
     int age = Integer.parseInt(scanner.nextLine());
 
-    System.out.print("\n------INTRO CARD------");
-        System.out.println("Name: "+name);
-        System.out.println("Age: "+age);
-        System.out.println("In 5 years, " + name + "will be "+ (age +5 +=)+ "years old.");
-
-        
-    }
+    System.out.println("\n-----Intro Card-----")
+    System.out.println("Name:"+name)
+    System.out.println("Name:"+age)
+    System.out.println("In 5 years," + name + "will be "+(age+5) + "years old.");
+  }
 }
 
-import jave.util.Arraylist;
+//New java Compiler
+//arraylist
+import java.util.ArrayList;
 import java.util.Scanner;
 
 class Contact{
-    public String name;
-    public String phone:
+  public String name;
+  public String phone;
 
-    public Contact(String name, String phone){
-        this.name =name;
-        this.name = phone;
+  public Contact(String name, String phone){
+    this.name = name;
+    this.phone = phone;
 
-        public String toString()
-            return name+ ": "+phoe;
+  }
+  public String toString(){
+    return name+ ": "+phone;
+  }
+}
 
-    public class Main{
-        static Arraylist<contact>contacts = new Arraylist<>();
-        public static void main(string[])args(
-            contacts.add(new Contact("Ana Reyes:, "0917-123-4567"));
-           contacts.add(new Contacts("Mark Cruz", "0928-765-4321"));
+public class Main{
+  static ArrayList<Contact>contacts = new ArrayList<>();
+  public static void main(String[]args){
+    contacts.add(new Contact("Ana Reyes","0917-123-4567"));
+    contacts.add(new Contact("Mark Cruz","0928-765-4321"));
 
-    System.out.println(All contacts: );
-    for(contact c: contacts)System.out.println(c);
-    }
-    static void search(String name){
-        for (Contact c:contacts){
-        if(c.name.equalsIgnoreCase(name)){
+    System.out.println("All contacts: ");
+    for(Contact c: contacts)System.out.println(c);
+
+    search("Ana Reyes");
+    delete("Mark Cruz");
+
+    System.out.println("\nAfter delete:")
+    for(Contact c: contacts)System.out.println(c); 
+  }
+  static void search(String name){
+    for(Contact c: contacts){
+      if(c.name.equalsIgnoreCase(name)){
         System.out.println("Found: " +c);
         return;
- }
-}
-        System.out.print(name+"not found.");
-    }
-static void delete(String name){
-contacts.removeIf(c->c.name.equalsIgnoreCase(name));
- }
-}
+      }
 
-import java.util.Arraylist;
+    }
+    System.out.println(name+"not found.");
+  }
+  static void delete(String name){
+  contacts.removeIf(c->c.name.equalsIgnoreCase(name))
+  }
+}
+import java.util.ArrayList;
 import java.util.Scanner;
 
-class Contact {
-    private String name;
-    private String phone;
-}
+class Contact{
+  private String name;
+  private String phone;
 
-    public String getName() {return name: }
-    public String getname() {return phone:}
-    public void setPhone(String phone) {this.phone =phone:}
+  public Contact(String name, String phone){
+    this.name=name;
+    this.phone=phone;
+  }
+  public String getName() {return name;}
+  public String getPhone() {return phone;}
+  public void setPhone(String phone) {this.phone= phone;}
 
-public String toString() {
-return name +: " phone;
+  public String toString(){
+    return name + ": " + phone
+  }
+
 }
-class ContactBook(
-    private Arraylist<Contact> contact =new Arraylist<>();
-public void add(String name, String phone){
-contacts.add(new Contact(name, phone));
-}
-public Contact search (String name){
-    for(contact c: contacts){
-    if (c.getName().equalsIgnoreCase(name)) return c;
+class ContactBool{
+  private ArrayList<Contact> contacts = new ArrayList<>();
+
+  public void add(String name, String phone){
+    contacts.add(new Contact(name, phone));
+
+  }
+  public Contact search(String name){
+    for(Contact c: contacts){
+      if (c.getNmae().equalsIgnoreCase(name)) return c;
     }
-return null;
+    return null;
+  }
+  public void listAll(){
+    for(Contact c: contacts)System.out.println(c);
+  }
+}
 
-}
-static void listAll(){
-    for (Contact c: contacts) System.out.println(c);
-}
-}
 public class Main{
-    public static void main (String) {}args{
-        ContactBook book = new ContactBook();
-        book.add("Ana Reyes", "0917-123-456")
-    }
+  public static void main(String[]args){
+    ContactBook book = new ContactBook();
+    book.add("Ana Reyes", "0917-123-4567");
+    book.add("Mark Cruz", "0928-765-4321");
+    book.listAll();
+
+    Contact found = book.search("Mark Cruz");
+    System.out.println("Search result: "+ found !=null? found: "not found");
+  }
 }
-}
-)
